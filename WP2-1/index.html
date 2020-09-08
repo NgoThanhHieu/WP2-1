@@ -1,0 +1,53 @@
+<?php
+
+$submit = filter_input(INPUT_POST, 'submit');
+$auto = filter_input (INPUT_POST,'auta');
+
+
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<?php
+
+if(isset($submit)) {?>
+<?= $auto ?>
+
+
+    <?php
+ 
+} else { 
+?>
+<br>
+<form action="index.php" method="post">
+Typ vozidla: <select name="auta" id="auta">
+        <option value="nakladní">nakladní</option>
+        <option value="osobní">osobní</option>
+        <option value="autobus">autobus</option>
+        <option value="karavan">karavan</option>
+        <option value="trolejbus">trolejbus</option>
+</select>
+
+
+
+
+<input type="submit" name="submit" value="Odeslat"
+
+</form>
+
+<?php
+
+</body>
+
+</html>
